@@ -5,12 +5,22 @@ using UnityEngine;
 public class GarageDoor : MonoBehaviour {
 
     public AudioSource audioSource;
-    public AudioClip audioclip;
+    public AudioClip audioClip;
+    bool doorOpened;
 
     private void OnTriggerEnter(Collider other) {
-        //if(other.keys == true) {
-        //    open door
-        //}
-        audioSource.PlayOneShot(audioclip);
+        var character = other.gameObject.GetComponent<Character>();
+        if(character != null) {
+            if(character.PlayerHasFoundKeys()) {
+                // Open Door
+                print("Open Door!");
+                if(!doorOpened) {
+                    doorOpened = true;
+                    transform.LookAt(Vector3.right, Vector3.up);
+                }
+            } else {
+                audioSource.PlayOneShot(audioClip);
+            }
+        }
     }
 }
