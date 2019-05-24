@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6521522102634913738}
   - component: {fileID: 6521522102634913739}
   - component: {fileID: 6521522102634913736}
-  - component: {fileID: 6521522102634913737}
+  - component: {fileID: 3319169611466993667}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6521522102634913742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.17089774, z: -0.33000016}
+  m_LocalPosition: {x: 0, y: -0.17089774, z: -0.21}
   m_LocalScale: {x: 1, y: 0.31072316, z: 1}
   m_Children: []
   m_Father: {fileID: 6521522103064750416}
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6521522102634913737
+--- !u!114 &3319169611466993667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6521522102634913742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cfb69c8b5871541a7a7ba11e84f4b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eb76123cd15f3c4fa5d72b57a83bef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioObject: {fileID: 0}
@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 6521522103064750417}
   - component: {fileID: 6521522103064750422}
   - component: {fileID: 6521522103064750423}
-  - component: {fileID: 6521522103064750420}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -134,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 6521522103064750421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.59, y: 1.21, z: 4.3}
-  m_LocalScale: {x: 1, y: 3.218299, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 6521522102634913733}
   m_Father: {fileID: 0}
@@ -198,16 +197,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6521522103064750420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6521522103064750421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cfb69c8b5871541a7a7ba11e84f4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioObject: {fileID: 0}
