@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour {
 
-    bool keysFound;
-    bool beenToKitchen;
-    bool hasCutters;
+    public bool knifeFound;
+    public bool keysFound;
+    public bool beenToKitchen;
+    public bool hasCutters;
 
     public void PlayerFoundKeys() {
         keysFound = true;
@@ -30,5 +31,13 @@ public class Character : MonoBehaviour {
 
     public bool PlayerHasFoundCutters() {
         return hasCutters;
+    }
+
+    public void PlayerFoundKnife() {
+        knifeFound = true;
+    }
+
+    public bool PlayerHasFoundKnife() {
+        return knifeFound;
     }
 }
