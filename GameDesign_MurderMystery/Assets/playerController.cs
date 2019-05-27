@@ -11,22 +11,25 @@ public class playerController : MonoBehaviour
     public bool hasBalcony = false;
     void Start()
     {
-       // player = 
+        player = this.gameObject; 
         //anim = 
     }
 
-    void onTriggerEnter(Collider csTriggers)
+    void OnTriggerEnter(Collider csTriggers)
     {
-        if(csTriggers.gameObject.tag == "Balcony")
+        if (csTriggers.gameObject.tag == "Balcony" && hasBalcony == false && hasMirror == true && hasKnife == true)
         {
+            print("Leaving Startingroom!");
             hasBalcony = true;
-        } else if (csTriggers.gameObject.tag == "Mirror" && hasBalcony == false && hasMirror == false && hasKnife == true)
+        }else if (csTriggers.gameObject.tag == "Mirror" && hasBalcony == false && hasMirror == false && hasKnife == true)
         {
+            print("Looked at self in the mirror!");
             hasMirror = true;
         }else if(csTriggers.gameObject.tag == "Knife" && hasBalcony == false && hasMirror == false && hasKnife == false)
         {
-            print("inside collider");
+            print("Kicked knife and picked it up!");
             hasKnife = true;
         }
+    
     }
 }
