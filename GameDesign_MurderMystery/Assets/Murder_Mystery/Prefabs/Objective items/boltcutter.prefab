@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7093488322790513990}
   - component: {fileID: 1879700041529041653}
   - component: {fileID: 3597568759869344591}
+  - component: {fileID: 7879245433564561801}
   m_Layer: 0
   m_Name: boltcutter covers
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7879245433564561801
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393000697537808714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7734495678601666370, guid: 980d0ec494214e643b82a954a22be1fb, type: 3}
 --- !u!1 &2114075031614359096
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +103,7 @@ GameObject:
   - component: {fileID: 4209633375173556335}
   - component: {fileID: 7234127940775129084}
   - component: {fileID: 1167037060198886268}
+  - component: {fileID: 915766656018980954}
   m_Layer: 0
   m_Name: boltcutter_blade
   m_TagString: Untagged
@@ -154,6 +170,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &915766656018980954
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114075031614359096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -9157052581041984667, guid: 980d0ec494214e643b82a954a22be1fb, type: 3}
 --- !u!1 &2119318350596070803
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +228,7 @@ GameObject:
   - component: {fileID: 1198418534801141309}
   - component: {fileID: 3863316281993432653}
   - component: {fileID: 3378237790969888949}
+  - component: {fileID: 6757372505819373573}
   m_Layer: 0
   m_Name: Boltcutter_handles
   m_TagString: Untagged
@@ -264,3 +295,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6757372505819373573
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169424665784159900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 6653594406754821838, guid: 980d0ec494214e643b82a954a22be1fb, type: 3}
