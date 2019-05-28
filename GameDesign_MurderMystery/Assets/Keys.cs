@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Keys : MonoBehaviour {
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
         var character = other.gameObject.GetComponent<Character>();
+
         if(character != null) {
-            character.PlayerFoundKeys();
-            Destroy(gameObject);
+
+            character.SetUIText("Press U to pick up keys.");
+            if(Input.GetKeyDown(KeyCode.U)) {
+                character.PlayerFoundKeys();
+                Destroy(gameObject);
+            }
         }
+
     }
 }

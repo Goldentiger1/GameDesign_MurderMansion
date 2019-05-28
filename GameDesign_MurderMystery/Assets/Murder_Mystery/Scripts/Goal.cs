@@ -6,21 +6,33 @@ public class Goal : MonoBehaviour {
 
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public GameObject pivot;
+    public GameObject chain;
+    bool soundPlayed;
     bool doorOpened;
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
         var character = other.gameObject.GetComponent<Character>();
         if(character != null) {
             if(character.PlayerHasFoundCutters()) {
-                // Open Door
-                print("Open Door!");
                 if(!doorOpened) {
-                    doorOpened = true;
-                    transform.LookAt(Vector3.right, Vector3.up);
+                    character.SetUIText("Press U to use cutters on chain.");
+                    if(Input.GetKeyDown(KeyCode.U)) {
+                        Destroy(chain);
+                        doorOpened = true;
+                        pivot.transform.LookAt(Vector3.right, Vector3.up);
+                    }
                 }
             } else {
-                audioSource.PlayOneShot(audioClip);
+                if(!soundPlayed) {
+                    audioSource.PlayOneShot(audioClip);
+                    soundPlayed = true;
+                }
+
             }
         }
+    }
+    private void OnTriggerExit(Collider other) {
+        soundPlayed = false;
     }
 }

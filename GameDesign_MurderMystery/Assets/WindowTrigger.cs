@@ -5,25 +5,23 @@ using UnityEngine;
 public class WindowTrigger : MonoBehaviour {
 
     public Transform balcony;
+    public GameObject balconyLight;
+    public GameObject window;
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
         var character = other.gameObject.GetComponent<Character>();
         if(character != null) {
-            if(character.PlayerHasFoundKnife()) {
+            if(character.PlayerHasFoundKnife() && character.PlayerHasSeen1stCutscene()) {
                 var cc = character.GetComponent<CharacterController>();
+                character.SetUIText("Press u to use knife to open window");
+                if(Input.GetKeyDown(KeyCode.U)) {
+                    cc.enabled = false;
+                    other.transform.position = balcony.position;
+                    cc.enabled = true;
+                    balconyLight.gameObject.SetActive(false);
+                    Destroy(window);
+                }
 
-                cc.enabled = false;
-                other.transform.position = balcony.position;
-                cc.enabled = true;
-                print("koodissa ollaan" + other.name);
-                //crb.MovePosition(balcony.position);
-               //other.gameObject.GetComponent<CharacterController>().Move(balcony.position - other.transform.position);
-
-                //crb.MovePosition(balcony.position);
-                //crb.useGravity = false;
-                //character.gameObject.transform.position = balcony.transform.position;
-                //crb.isKinematic = false;
-                //crb.useGravity = true;
             }
         }
     }
