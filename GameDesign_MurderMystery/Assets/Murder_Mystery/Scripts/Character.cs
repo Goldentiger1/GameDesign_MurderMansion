@@ -62,6 +62,15 @@ public class Character : MonoBehaviour {
         return knifeFound;
     }
 
+    public void SetUITextInfinite(string text) {
+        UIText.text = text;
+        textTimer = Mathf.Infinity;
+    }
+
+    public void SetUITextZero() {
+        textTimer = 0f;
+    }
+
     public void SetUIText(string text) {
         UIText.text = text;
         textTimer = textTime;

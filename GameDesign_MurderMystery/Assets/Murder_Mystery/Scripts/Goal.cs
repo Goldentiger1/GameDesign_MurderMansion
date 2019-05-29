@@ -16,11 +16,12 @@ public class Goal : MonoBehaviour {
         if(character != null) {
             if(character.PlayerHasFoundCutters()) {
                 if(!doorOpened) {
-                    character.SetUIText("Press U to use cutters on chain.");
-                    if(Input.GetKeyDown(KeyCode.U)) {
+                    character.SetUIText("Press Spacebar to use cutters on chain.");
+                    if(Input.GetKeyDown(KeyCode.Space)) {
                         Destroy(chain);
                         doorOpened = true;
                         pivot.transform.LookAt(Vector3.right, Vector3.up);
+                        character.SetUIText("");
                     }
                 }
             } else {

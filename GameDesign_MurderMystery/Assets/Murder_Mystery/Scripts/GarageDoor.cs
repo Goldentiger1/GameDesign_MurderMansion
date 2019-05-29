@@ -14,9 +14,11 @@ public class GarageDoor : MonoBehaviour {
             var character = other.gameObject.GetComponent<Character>();
             if(character != null) {
                 if(character.PlayerHasFoundKeys()) {
-                    if(Input.GetKeyDown(KeyCode.U)) {
+                    character.SetUIText("Press Spacebar to open");
+                    if(Input.GetKeyDown(KeyCode.Space)) {
                         doorOpened = true;
                         transform.LookAt(Vector3.right, Vector3.up);
+                        character.SetUIText("");
                     }
                 } else {
                     if(!soundPlayed) {

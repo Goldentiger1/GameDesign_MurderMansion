@@ -11,6 +11,7 @@ public class KitchenDoors : MonoBehaviour {
         if(character != null) {
             if(character.PlayerHasBeenToKitchen()) {
                 if(!hasSeenCutScene) {
+                    character.SetUITextInfinite("press Spacebar to close");
                     image2.gameObject.SetActive(true);
                     keys.gameObject.SetActive(true);
                     hasSeenCutScene = true;
